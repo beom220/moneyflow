@@ -29,12 +29,19 @@ a {
 	@include reset;
 }
 
-ul, li, ol {
+ul, ol, li {
 	list-style: none;
 	@include reset;
 }
 
 dt, dd {
+	@include reset;
+}
+
+button{
+	border:0;
+	background: unset;
+	cursor: pointer;
 	@include reset;
 }
 

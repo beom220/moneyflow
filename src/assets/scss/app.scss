@@ -1,7 +1,8 @@
 @use "color";
-
+@use "font";
 html, body {
 	background: color.$theme-color;
+	font-family: 'Pretendard', sans-serif;
 }
 
 .navigation-bar {
@@ -17,9 +18,12 @@ html, body {
 		width: 100%;
 		text-align: center;
 		padding: 1rem;
+		font-size: 24px;
+		color: rgba(color.$navigation-fontColor, .6);
+		transition: color ease-in-out .3s;
 
 		&.active {
-			color: red;
+			color: color.$navigation-fontColor;
 		}
 	}
 }
