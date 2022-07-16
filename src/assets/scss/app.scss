@@ -1,0 +1,25 @@
+@use "color";
+
+html, body {
+	background: color.$theme-color;
+}
+
+.navigation-bar {
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: color.$navigation-background;
+	display: flex;
+	flex-direction: row-reverse;
+
+	a {
+		width: 100%;
+		text-align: center;
+		padding: 1rem;
+
+		&.active {
+			color: red;
+		}
+	}
+}
