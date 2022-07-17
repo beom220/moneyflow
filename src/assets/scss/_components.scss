@@ -1,0 +1,76 @@
+@use "color";
+//input
+
+input[type=text].input,
+input[type=number].input{
+	border-radius: 4px;
+	padding: .625rem .375rem;
+	border: 1px solid #eee;
+}
+
+
+// buttons
+.buttons {
+	display: flex;
+}
+
+.button {
+	&.full {
+		width: 100%;
+	}
+
+	&.half {
+		width: 50%;
+	}
+}
+
+@mixin card() {
+	background-color: color.$card-background;
+	overflow: hidden;
+	border-radius: 4px;
+	@content
+}
+
+.wallets {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	padding: 1rem;
+}
+
+.wallet {
+	width: 100%;
+	@include card;
+
+	.contents {
+		padding: .625rem;
+		.wallet_name{
+			font-size: .875rem;
+		}
+		.assets {
+			text-align: center;
+			font-size: 1.625rem;
+			padding: 1.625rem;
+			letter-spacing: 1px;
+		}
+	}
+
+	.buttons .button {
+		padding: .625rem;
+		position: relative;
+		&::after{
+			display: block;
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 1px;
+			height: 1rem;
+			transform: translate(-50%, -50%);
+			background-color: #ccc;
+		}
+		&:last-child::after{display: none}
+		//border: 1px solid red;
+	}
+}
+

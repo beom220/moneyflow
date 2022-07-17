@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 300;
+  font-style: normal;
+  src: url(../font/GmarketSansLight.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 500;
+  font-style: normal;
+  src: url(../font/GmarketSansMedium.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../font/GmarketSansBold.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: url(../font/Pretendard-Black.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: url(../font/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: url(../font/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: url(../font/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: url(../font/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: url(../font/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: url(../font/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: url(../font/Pretendard-Thin.woff) format("woff");
+}
+.material-icons, .material-icons-outlined {
+  color: inherit;
+  font-size: inherit;
+}
+
+html, body {
+  background: #1f9aa9;
+  font-family: "Pretendard", sans-serif;
+}
+
+.navigation-bar {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.navigation-bar a {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 24px;
+  color: rgba(17, 17, 17, 0.6);
+  transition: color ease-in-out 0.3s;
+}
+.navigation-bar a.active {
+  color: #111;
+}
+
+/*# sourceMappingURL=app.css.map */

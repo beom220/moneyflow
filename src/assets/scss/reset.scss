@@ -1,0 +1,58 @@
+@mixin reset() {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	@content;
+}
+
+html, body {
+	font-size: 16px;
+	@include reset;
+}
+
+div, article, section {
+	@include reset;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+	@include reset;
+}
+
+p, span {
+	@include reset;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	@include reset;
+}
+
+ul, ol, li {
+	list-style: none;
+	@include reset;
+}
+
+dt, dd {
+	@include reset;
+}
+
+button {
+	border: 0;
+	background: unset;
+	cursor: pointer;
+	@include reset;
+}
+
+
+input[type="number"] {
+	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+}
+input[type="text"],
+input[type="number"]{
+	outline: unset;
+	@include reset
+}

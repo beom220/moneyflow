@@ -1,0 +1,29 @@
+@use "color";
+@use "font";
+html, body {
+	background: color.$theme-color;
+	font-family: 'Pretendard', sans-serif;
+}
+
+.navigation-bar {
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: color.$navigation-background;
+	display: flex;
+	flex-direction: row-reverse;
+
+	a {
+		width: 100%;
+		text-align: center;
+		padding: 1rem;
+		font-size: 24px;
+		color: rgba(color.$navigation-fontColor, .6);
+		transition: color ease-in-out .3s;
+
+		&.active {
+			color: color.$navigation-fontColor;
+		}
+	}
+}

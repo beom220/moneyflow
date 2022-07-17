@@ -1,0 +1,64 @@
+@use "color";
+@forward "components";
+
+.wallet{
+	&.add {
+		text-align: center;
+		background-color: rgba(#fff, .8);
+		transition: background-color ease .3s;
+		&:hover{background-color: #fff}
+
+		.button {
+			width: 100%;
+			padding: .625rem 0;
+			color: color.$theme-color;
+		}
+
+		.icons {
+			font-size: 3rem;
+		}
+	}
+
+	&.create {
+		text-align: center;
+
+		> .button {
+			width: 100%;
+			padding: 1.25rem 0;
+			color: color.$theme-color;
+
+			p {
+				color: #111;
+				padding-top: .625rem;
+			}
+
+			.icons {
+				font-size: 3rem;
+				transition: transform ease-in-out .3s;
+			}
+			&:hover, &:focus{
+				.icons{transform: rotate(90deg)}
+			}
+		}
+	}
+}
+
+form .contents{
+	display: flex;
+	flex-direction: column;
+	gap: .625rem;
+	label{
+		display: flex;
+		flex-direction: column;
+		gap: .375rem;
+		span{
+			text-align: left;
+			font-size: 13px;
+		}
+		input{
+			&:focus, &:active{
+				border: 2px solid color.$theme-color;
+			}
+		}
+	}
+}

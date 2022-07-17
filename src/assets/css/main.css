@@ -1,0 +1,117 @@
+input[type=text].input,
+input[type=number].input {
+  border-radius: 4px;
+  padding: 0.625rem 0.375rem;
+  border: 1px solid #eee;
+}
+
+.buttons {
+  display: flex;
+}
+
+.button.full {
+  width: 100%;
+}
+.button.half {
+  width: 50%;
+}
+
+.wallets {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem;
+}
+
+.wallet {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.wallet .contents {
+  padding: 0.625rem;
+}
+.wallet .contents .wallet_name {
+  font-size: 0.875rem;
+}
+.wallet .contents .assets {
+  text-align: center;
+  font-size: 1.625rem;
+  padding: 1.625rem;
+  letter-spacing: 1px;
+}
+.wallet .buttons .button {
+  padding: 0.625rem;
+  position: relative;
+}
+.wallet .buttons .button::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 1rem;
+  transform: translate(-50%, -50%);
+  background-color: #ccc;
+}
+.wallet .buttons .button:last-child::after {
+  display: none;
+}
+
+.wallet.add {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color ease 0.3s;
+}
+.wallet.add:hover {
+  background-color: #fff;
+}
+.wallet.add .button {
+  width: 100%;
+  padding: 0.625rem 0;
+  color: #1f9aa9;
+}
+.wallet.add .icons {
+  font-size: 3rem;
+}
+.wallet.create {
+  text-align: center;
+}
+.wallet.create > .button {
+  width: 100%;
+  padding: 1.25rem 0;
+  color: #1f9aa9;
+}
+.wallet.create > .button p {
+  color: #111;
+  padding-top: 0.625rem;
+}
+.wallet.create > .button .icons {
+  font-size: 3rem;
+  transition: transform ease-in-out 0.3s;
+}
+.wallet.create > .button:hover .icons, .wallet.create > .button:focus .icons {
+  transform: rotate(90deg);
+}
+
+form .contents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+form .contents label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+form .contents label span {
+  text-align: left;
+  font-size: 13px;
+}
+form .contents label input:focus, form .contents label input:active {
+  border: 2px solid #1f9aa9;
+}
+
+/*# sourceMappingURL=main.css.map */
