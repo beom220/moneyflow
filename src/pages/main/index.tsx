@@ -1,13 +1,15 @@
-import MyWallets from "./wallet";
 import React from "react";
+import Wallets from "./wallets";
 import "../../assets/css/main.css"
-import User from "./user";
+import UserCard from "./user";
+import Register from "./register";
 
 export default function MainPages(){
     return (
         <>
-            <User/>
-            <MyWallets/>
+            <UserCard/>
+            <Wallets/>
+            <Register/>
         </>
     )
 }

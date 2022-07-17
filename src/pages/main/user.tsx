@@ -6,7 +6,7 @@ interface User {
     name:string
 }
 
-export default function User(){
+export default function UserCard(){
     const user:User = {
         id:1,
         name:'홍길동'
