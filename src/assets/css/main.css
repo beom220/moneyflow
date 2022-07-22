@@ -8,12 +8,21 @@ input[type=number].input {
 .buttons {
   display: flex;
 }
+.buttons.stack {
+  flex-direction: column;
+}
+.buttons.stack .button::after {
+  display: none;
+}
 
 .button.full {
   width: 100%;
 }
 .button.half {
   width: 50%;
+}
+.button.primary {
+  background-color: #1f9aa9;
 }
 
 .wallets {
@@ -41,11 +50,11 @@ input[type=number].input {
   padding: 1.625rem;
   letter-spacing: 1px;
 }
-.wallet .buttons .button {
+.wallet .button {
   padding: 0.625rem;
   position: relative;
 }
-.wallet .buttons .button::after {
+.wallet .button::after {
   display: block;
   content: "";
   position: absolute;
@@ -56,8 +65,12 @@ input[type=number].input {
   transform: translate(-50%, -50%);
   background-color: #ccc;
 }
-.wallet .buttons .button:last-child::after {
+.wallet .button:last-child::after {
   display: none;
+}
+
+.tab.buttons {
+  flex: 1 1 0;
 }
 
 .wallet.add {

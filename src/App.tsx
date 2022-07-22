@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter } from "react-router-dom";
-import FixedBottomNavigation from "./components/appbar";
-import Router from "./router";
+
+import Router from "./pages/router";
+import FixedBottomNavigation from "./components/layout/appbar";
 
 function App() {
     return (

@@ -1,5 +1,4 @@
-import Card from "../../components/card";
-import {Fragment} from "react";
+import Card from "../common/card";
 
 interface User {
     id:number,

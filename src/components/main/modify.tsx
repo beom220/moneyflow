@@ -1,10 +1,10 @@
 import {ChangeEvent, Dispatch, SetStateAction, useCallback, useState} from "react";
-import {WalletsType} from "../../app/wallets";
+import {WalletType} from "../../app/atom/wallets";
 
 interface PropTypes {
     setIsModify: Dispatch<SetStateAction<boolean>>;
-    modifyContents: WalletsType;
-    setModifyContents: Dispatch<SetStateAction<WalletsType>>;
+    modifyContents: WalletType;
+    setModifyContents: Dispatch<SetStateAction<WalletType>>;
     onModifyWallet: () => void;
     onDelete: (id:number) => void;
 }

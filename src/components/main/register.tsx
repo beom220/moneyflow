@@ -1,16 +1,16 @@
-import {Icon} from "../../components/icons";
+import {Icon} from "../common/icons";
 import {SetterOrUpdater, useRecoilState} from "recoil";
-import {walletsState, WalletsType} from "../../app/wallets";
+import {walletsState, WalletType} from "../../app/atom/wallets";
 import {ChangeEvent, useCallback, useState} from "react";
 
 interface PropsType {
-    wallets: WalletsType[];
-    setWallets: SetterOrUpdater<WalletsType[]>;
+    wallets: WalletType[];
+    setWallets: SetterOrUpdater<WalletType[]>;
     onCloseCreate: () => void;
 }
 
 export default function Register() {
-    const [wallets, setWallets] = useRecoilState<WalletsType[]>(walletsState);
+    const [wallets, setWallets] = useRecoilState<WalletType[]>(walletsState);
     const isFirst: boolean = !wallets.length;
     const [onCreate, setOnCreate] = useState<boolean>(false);
     const onCloseCreate = (): void => setOnCreate(false);
@@ -36,7 +36,7 @@ export default function Register() {
 
 function CreateWallet({wallets, setWallets, onCloseCreate}: PropsType) {
     const nextId: number = !wallets.length ? 0 : wallets[wallets.length - 1].id + 1;
-    const [walletInput, setWalletInput] = useState<WalletsType>({
+    const [walletInput, setWalletInput] = useState<WalletType>({
         id: nextId,
         name: '',
         assets: 0
@@ -48,7 +48,6 @@ function CreateWallet({wallets, setWallets, onCloseCreate}: PropsType) {
             ...walletInput,
             [name]: value
         });
-        console.log(walletInput);
     }, [walletInput, setWalletInput]);
 
     const createWallet = useCallback((e: ChangeEvent<HTMLFormElement>): void => {

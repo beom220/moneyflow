@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import {Icon} from "./icons";
+import {Icon} from "../common/icons";
 
 export default function FixedBottomNavigation() {
 
