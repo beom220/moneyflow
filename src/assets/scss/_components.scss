@@ -12,15 +12,25 @@ input[type=number].input{
 // buttons
 .buttons {
 	display: flex;
+	 &.stack{
+		 flex-direction: column;
+		 .button::after{display: none}
+	 }
 }
 
 .button {
+	// Size
 	&.full {
 		width: 100%;
 	}
 
 	&.half {
 		width: 50%;
+	}
+
+	// Color
+	&.primary {
+		background-color: color.$theme-color;
 	}
 }
 
@@ -55,7 +65,7 @@ input[type=number].input{
 		}
 	}
 
-	.buttons .button {
+	.button {
 		padding: .625rem;
 		position: relative;
 		&::after{
@@ -74,3 +84,7 @@ input[type=number].input{
 	}
 }
 
+// tab
+.tab.buttons{
+	flex: 1 1 0;
+}
