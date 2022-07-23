@@ -1,10 +1,11 @@
 import { Routes,Route } from "react-router-dom";
-import MainPages from "../pages/main";
+import Main from "../main";
+
 
 export default function Router(){
     return (
         <Routes>
-            <Route path="/" element={<MainPages/>}/>
+            <Route path="/" element={<Main/>}/>
         </Routes>
     )
 }
